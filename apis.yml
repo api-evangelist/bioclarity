@@ -1,23 +1,75 @@
 aid: bioclarity
+
 name: bioClarity
-description: 'bioClarity is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: http://www.bioclarity.com/cdn/shop/files/bioclarity_shareable_link_img.png?v=1644945104
+
+description: bioClarity is a plant‑based, vegan skincare brand offering a range of cruelty‑free products designed to promote clear, glowing skin.
+  Their catalog includes cleansers, moisturizers, masks, and targeted routines, all formulated with natural ingredients and free from harmful
+  chemicals. The company emphasizes sustainability, ethical sourcing, and community engagement through educational content and a loyalty program.
+
 url: https://raw.githubusercontent.com/api-evangelist/bioclarity/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Skincare
+- Vegan
+- Plant-based
+- Beauty
+- E-commerce
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/bioclarity-llms.txt
+- type: WellKnown
+  url: well-known/bioclarity-well-known.yml
+- type: Hosts
+  url: hosts/bioclarity-hosts.yml
+- type: Vendors
+  url: vendors/bioclarity-vendors.yml
+- type: TermsOfService
+  url: https://www.bioclarity.com/policies/terms-of-service
+- type: Support
+  url: https://www.bioclarity.com/pages/help
+- type: PrivacyPolicy
+  url: https://www.bioclarity.com/policies/privacy-policy
+- type: Login
+  url: https://www.bioclarity.com/account/login
+- type: DomainSecurity
+  url: security/bioclarity-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.bioclarity.com
+
+apis:
+- name: bioClarity API
+  description: API for bioClarity services
+  humanURL: https://www.bioclarity.com
+  baseURL: https://www.bioclarity.com/api
+  properties:
+  - type: GraphQL
+    url: graphql/bioclarity-graphql.json
+  aid: bioclarity:bioclarity-api
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
